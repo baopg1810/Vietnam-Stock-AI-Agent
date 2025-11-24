@@ -86,9 +86,7 @@ Kết quả test sẽ được lưu vào file CSV với format: `test_results_YY
 3. "Trong các mã BID, TCB và VCB mã nào có giá mở cửa thấp nhất trong 10 ngày qua?"
 4. "Tổng khối lượng giao dịch (volume) của mã VIC trong vòng 1 tuần gần đây"
 5. "So sánh khối lượng giao dịch của VIC với HPG trong 2 tuần gần đây"
-6. "Danh sách cổ đông lớn của VCB"
 7. "Danh sách ban lãnh đạo đang làm việc của VCB"
-8. "Các công ty con thuộc VCB"
 9. "Tính cho tôi SMA9 của mã VIC trong 2 tuần với timeframe 1d"
 10. "Tính cho tôi RSI14 của TCB trong 1 tuần với timeframe 1m"
 
@@ -100,5 +98,6 @@ Kết quả test sẽ được lưu vào file CSV với format: `test_results_YY
 - **vnstock**: Thư viện lấy dữ liệu chứng khoán Việt Nam
 - **FastAPI**: Web framework cho API
 - **Uvicorn**: ASGI server
+
 
 
