@@ -102,7 +102,7 @@ def get_company_officers(symbol: str):
     try:
         from vnstock import Vnstock
         stock = Vnstock().stock(symbol=symbol, source='VCI')
-        officers = stock.company.officers(symbol=symbol)
+        officers = stock.company.officers(filter_by='working')
         if officers is None or getattr(officers, 'empty', False):
             return f"Không tìm thấy thông tin ban lãnh đạo cho mã {symbol}."
         return officers.to_string()
