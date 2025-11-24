@@ -16,7 +16,6 @@ test_questions = [
     "Danh sách cổ đông lớn của VCB",
     "Danh sách ban lãnh đạo đang làm việc của VCB",
     "Các công ty con thuộc VCB",
-    "Lấy cho tôi toàn bộ tên các lãnh đạo đang làm việc của VCB",
     "Tính cho tôi SMA9 của mã VIC trong 2 tuần với timeframe 1d",
     "Tính cho tôi RSI14 của TCB trong 1 tuần với timeframe 1m"
 
@@ -60,4 +59,5 @@ def run_tests():
     print(f"\n--- Kết quả đã được lưu vào file: {csv_filename} ---")
 
 if __name__ == "__main__":
+
     run_tests()
