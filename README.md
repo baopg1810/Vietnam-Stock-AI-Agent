@@ -81,14 +81,14 @@ Kết quả test sẽ được lưu vào file CSV với format: `test_results_YY
 
 ## Các câu hỏi mẫu
 
-1. "Lấy dữ liệu OHLCV 10 ngày gần nhất HPG?"
-2. "Lấy giá đóng của mã VCB từ đầu tháng 11 theo khung 1d?"
-3. "Trong các mã BID, TCB và VCB mã nào có giá mở cửa thấp nhất trong 10 ngày qua?"
-4. "Tổng khối lượng giao dịch (volume) của mã VIC trong vòng 1 tuần gần đây"
-5. "So sánh khối lượng giao dịch của VIC với HPG trong 2 tuần gần đây"
-7. "Danh sách ban lãnh đạo đang làm việc của VCB"
-9. "Tính cho tôi SMA9 của mã VIC trong 2 tuần với timeframe 1d"
-10. "Tính cho tôi RSI14 của TCB trong 1 tuần với timeframe 1m"
+1.  "Lấy dữ liệu OHLCV 10 ngày gần nhất HPG?",
+2.  "Lấy giá đóng của của mã VCB từ đầu tháng 11 năm nay theo khung 1d?",
+3.  "Trong các mã BID, TCB và VCB mã nào có giá mở cửa thấp nhất trong 10 ngày qua",
+4.  "Tổng khối lượng giao dịch (volume) của mã VIC trong vòng 10 ngày gần đây",
+5.  "So sánh khối lượng giao dịch của VIC với HPG trong 2 tuần gần đây",
+6.  "Danh sách ban lãnh đạo đang làm việc của VCB",
+7.  "Tính cho tôi SMA9 của mã VIC với timeframe 1d",
+8.  "Tính SMA9 và SMA20 của mã TCB"
 
 ## Công nghệ sử dụng
 
@@ -98,6 +98,7 @@ Kết quả test sẽ được lưu vào file CSV với format: `test_results_YY
 - **vnstock**: Thư viện lấy dữ liệu chứng khoán Việt Nam
 - **FastAPI**: Web framework cho API
 - **Uvicorn**: ASGI server
+
 
 
 
