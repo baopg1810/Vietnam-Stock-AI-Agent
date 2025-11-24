@@ -44,17 +44,17 @@ tools = [
     StructuredTool.from_function(
         func=get_major_shareholders,
         name="get_major_shareholders",
-        description="Lấy danh sách cổ đông lớn (major shareholders) của một công ty theo mã chứng khoán."
+        description="Lấy danh sách cổ đông lớn (major shareholders) của một công ty theo mã chứng khoán (ticker)."
     ),
     StructuredTool.from_function(
         func=get_company_officers,
         name="get_company_officers",
-        description="Lấy danh sách ban lãnh đạo (officers) đang làm việc của một công ty theo mã chứng khoán."
+        description="Lấy danh sách ban lãnh đạo (officers) đang làm việc của một công ty theo mã chứng khoán (ticker)."
     ),
     StructuredTool.from_function(
         func=get_subsidiaries,
         name="get_subsidiaries",
-        description="Lấy danh sách các công ty con (subsidiaries) của một công ty theo mã chứng khoán."
+        description="Lấy danh sách các công ty con (subsidiaries) của một công ty theo mã chứng khoán (ticker)."
     ),
 ]
 
@@ -95,3 +95,4 @@ async def chat_endpoint(request: QuestionRequest):
 if __name__ == "__main__":
 
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
