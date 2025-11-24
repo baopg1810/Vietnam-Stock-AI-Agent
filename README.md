@@ -55,7 +55,7 @@ Agent stock LLM/
 ├── tools.py               # Các hàm công cụ (tools) cho Agent
 ├── test_agent.py          # Script kiểm thử Agent
 ├── requirements.txt       # Danh sách thư viện
-├── .env                   # API keys (không commit lên git)
+├── .env                   # API keys 
 ├── README.md              # File hướng dẫn
 └── venv_stock/            # Virtual environment
 ```
@@ -100,4 +100,5 @@ Kết quả test sẽ được lưu vào file CSV với format: `test_results_YY
 - **vnstock**: Thư viện lấy dữ liệu chứng khoán Việt Nam
 - **FastAPI**: Web framework cho API
 - **Uvicorn**: ASGI server
+
 
