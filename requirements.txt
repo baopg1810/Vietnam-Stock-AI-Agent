@@ -1,0 +1,8 @@
+vnstock
+langchain
+langchain-google-genai
+fastapi
+uvicorn
+pandas
+requests
+python-dotenv
