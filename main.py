@@ -4,20 +4,16 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
-# 1. Load biến môi trường từ file .env
 load_dotenv()
 
-# Kiểm tra API Key (để báo lỗi rõ ràng nếu quên)
 if not os.getenv("GOOGLE_API_KEY"):
     raise ValueError("Chưa tìm thấy GOOGLE_API_KEY. Vui lòng kiểm tra file .env")
 
-# 2. Các Import quan trọng của LangChain & Gemini
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.agents import create_agent
 from langchain_core.messages import HumanMessage
 from langchain_core.tools import StructuredTool 
 
-# 3. Import các hàm chức năng từ file tools.py
 from tools import (
     get_company_info,
     get_stock_history,
@@ -29,7 +25,6 @@ from tools import (
 
 # --- CẤU HÌNH AGENT ---
 
-# Định nghĩa Tools để Agent hiểu cách sử dụng
 tools = [
     StructuredTool.from_function(
         func=get_company_info,
@@ -63,13 +58,11 @@ tools = [
     ),
 ]
 
-# Khởi tạo LLM (Gemini)
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
     temperature=0,
 )
 
-# Tạo agent với system message
 system_message = (
     "Bạn là một chuyên gia phân tích chứng khoán tại Việt Nam. "
     "Nhiệm vụ của bạn là trả lời câu hỏi của nhà đầu tư dựa trên dữ liệu từ các tools. "
@@ -91,16 +84,14 @@ async def chat_endpoint(request: QuestionRequest):
     API nhận câu hỏi và trả về câu trả lời của AI.
     """
     try:
-        # Gọi Agent xử lý
         result = agent.invoke({"messages": [HumanMessage(content=request.question)]})
-        # Lấy message cuối cùng từ kết quả
         last_message = result["messages"][-1].content
         return {"answer": last_message}
     except Exception as e:
-        # In lỗi ra terminal để dễ debug
         print(f"Lỗi xử lý: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 # Chạy server
 if __name__ == "__main__":
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
