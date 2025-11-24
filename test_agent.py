@@ -9,13 +9,13 @@ API_URL = "http://localhost:8000/api/chat"
 # Danh sách câu hỏi test
 test_questions = [
     "Lấy dữ liệu OHLCV 10 ngày gần nhất HPG?",
-    "Lấy giá đóng của của mã VCB từ đầu tháng 11 theo khung 1d?",
+    "Lấy giá đóng của của mã VCB từ đầu tháng 11 năm nay theo khung 1d?",
     "Trong các mã BID, TCB và VCB mã nào có giá mở cửa thấp nhất trong 10 ngày qua",
-    "Tổng khối lượng giao dịch (volume) của mã VIC trong vòng 1 tuần gần đây",
+    "Tổng khối lượng giao dịch (volume) của mã VIC trong vòng 10 ngày gần đây",
     "So sánh khối lượng giao dịch của VIC với HPG trong 2 tuần gần đây",
     "Danh sách ban lãnh đạo đang làm việc của VCB",
-    "Tính cho tôi SMA9 của mã VIC trong 2 tuần với timeframe 1d",
-    "Tính cho tôi RSI14 của TCB trong 1 tuần với timeframe 1m"
+    "Tính cho tôi SMA9 của mã VIC với timeframe 1d",
+    "Tính SMA9 và SMA20 của mã TCB"
 
 ]
 
@@ -59,4 +59,5 @@ def run_tests():
 if __name__ == "__main__":
 
     run_tests()
+
 
